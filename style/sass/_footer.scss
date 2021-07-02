@@ -1,0 +1,15 @@
+footer{
+    width: auto;
+    height: 70px;
+    background-color: black;
+    color: white;
+    font-family: 'libre franklin';
+    padding: 10px;
+    .contact{
+        display: flex;
+        align-items: center;
+        .far {
+            margin-right: 10px;
+        }
+    }
+}

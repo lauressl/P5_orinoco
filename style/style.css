@@ -1,0 +1,275 @@
+@charset "UTF-8";
+body {
+  font-family: "libre franklin";
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: auto;
+  height: 65px;
+  background: linear-gradient(0deg, #d76111 0%, #7f45fc 100%);
+  background: -moz-linear-gradient(0deg, #d76111 0%, #7f45fc 100%);
+  background: -webkit-linear-gradient(0deg, #d76111 0%, #7f45fc 100%);
+}
+
+header p {
+  color: white;
+}
+
+#logo_header {
+  width: 220px;
+  height: 65px;
+}
+
+#search {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 500px;
+}
+
+#search i {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  color: black;
+  background-color: white;
+  height: 34px;
+  width: 40px;
+}
+
+#search input {
+  font-size: 20px;
+  width: 150px;
+  height: 30px;
+  margin-left: 5px;
+}
+
+footer {
+  width: auto;
+  height: 70px;
+  background-color: black;
+  color: white;
+  font-family: "libre franklin";
+  padding: 10px;
+}
+footer .contact {
+  display: flex;
+  align-items: center;
+}
+footer .contact .far {
+  margin-right: 10px;
+}
+
+#produit {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  width: auto;
+}
+
+#produit div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 20px;
+  box-shadow: #9c9999 1px 2px 3px 4px;
+  height: 300px;
+  width: 300px;
+  padding: 10px;
+  margin: 10px;
+}
+
+#produit p {
+  font-family: "libre franklin";
+  font-weight: bold;
+}
+
+img {
+  width: 300px;
+  height: 200px;
+}
+
+button {
+  width: 130px;
+  height: 30px;
+  font-family: "libre franklin";
+  background: linear-gradient(90deg, #d76111 0%, #fefeff 100%);
+  border: none;
+  border-radius: 10px;
+}
+
+/*page produit*/
+#produit_unit {
+  display: flex;
+  border-radius: 20px;
+  box-shadow: #9c9999 1px 2px 3px 4px;
+  height: auto;
+  width: 40%;
+  padding: 10px;
+  margin: auto;
+}
+
+#produit_unit div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+nav {
+  display: flex;
+  width: auto;
+  justify-content: space-between;
+  height: 30px;
+  background-color: black;
+  color: white;
+}
+
+#nav_bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 300px;
+  margin-left: 15px;
+}
+
+#nav_bar a:hover {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #aa2be6;
+  height: 30px;
+}
+
+#panier {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  text-decoration: none;
+  color: white;
+  width: 70px;
+  padding-right: 20px;
+}
+
+main h1 {
+  font-size: 24px;
+}
+
+main h2 {
+  font-size: 18px;
+}
+
+body {
+  font-family: "libre franklin";
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: auto;
+  height: 65px;
+  background: linear-gradient(0deg, #d76111 0%, #7f45fc 100%);
+  background: -moz-linear-gradient(0deg, #d76111 0%, #7f45fc 100%);
+  background: -webkit-linear-gradient(0deg, #d76111 0%, #7f45fc 100%);
+}
+
+header p {
+  color: white;
+}
+
+#logo_header {
+  width: 220px;
+  height: 65px;
+}
+
+#search {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 500px;
+}
+
+#search i {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  color: black;
+  background-color: white;
+  height: 34px;
+  width: 40px;
+}
+
+#search input {
+  font-size: 20px;
+  width: 150px;
+  height: 30px;
+  margin-left: 5px;
+}
+
+form {
+  /* Uniquement centrer le formulaire sur la page */
+  margin: 0 auto;
+  width: 400px;
+  /* Encadré pour voir les limites du formulaire */
+  padding: 1em;
+  border: 1px solid #CCC;
+  border-radius: 1em;
+}
+
+form div + div {
+  margin-top: 1em;
+}
+
+label {
+  /* Pour être sûrs que toutes les étiquettes ont même taille et sont correctement alignées */
+  display: inline-block;
+  width: 90px;
+  text-align: right;
+}
+
+input, textarea {
+  /* Pour s'assurer que tous les champs texte ont la même police.
+     Par défaut, les textarea ont une police monospace */
+  font: 1em sans-serif;
+  /* Pour que tous les champs texte aient la même dimension */
+  width: 300px;
+  box-sizing: border-box;
+  /* Pour harmoniser le look & feel des bordures des champs texte */
+  border: 1px solid #999;
+}
+
+input:focus, textarea:focus {
+  /* Pour souligner légèrement les éléments actifs */
+  border-color: #000;
+}
+
+textarea {
+  /* Pour aligner les champs texte multi‑ligne avec leur étiquette */
+  vertical-align: top;
+  /* Pour donner assez de place pour écrire du texte */
+  height: 5em;
+}
+
+.button {
+  /* Pour placer le bouton à la même position que les champs texte */
+  padding-left: 90px;
+  /* même taille que les étiquettes */
+}
+
+button {
+  /* Cette marge supplémentaire représente grosso modo le même espace que celui
+     entre les étiquettes et les champs texte */
+  margin-left: 0.5em;
+}
+
+/*# sourceMappingURL=style.css.map */

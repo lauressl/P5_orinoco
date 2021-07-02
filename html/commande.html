@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="style.css">
+        <script src="https://kit.fontawesome.com/cd25f068f3.js" crossorigin="anonymous"></script>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <img id="logo_header" src="logo2.png">
+            <div id="search">
+                <p>Rechercher sur le site :</p>
+                <input id="input_search">
+                <i class="fas fa-search"></i>
+            </div>
+        </header>
+        <nav>
+            <div id="nav_bar">
+                <a href= "index.html">Accueil</a>
+                <p>Blog</p>
+            </div>
+            <a href="panier.html" id="panier">
+                <p>Panier</p>
+                <i class="fas fa-shopping-basket"></i>
+            </a>
+        </nav>
+        <main>
+            <form action="/ma-page-de-traitement" method="post">
+                <div>
+                    <label for="firstName">Nom :</label>
+                    <input type="text" id="firstName" name="firstName">
+                </div>
+                <div>
+                    <label for="lastName">Prénom :</label>
+                    <input type="text" id="lastName" name="lastName">
+                </div>
+                <div>
+                    <label for="adress">Adresse :</label>
+                    <input type="text" id="adress" name="adress">
+                </div>
+                <div>
+                    <label for="city">Ville :</label>
+                    <input type="text" id="city" name="city">
+                </div>
+                <div>
+                    <label for="mail">e-mail :</label>
+                    <input type="email" id="mail" name="mail">
+                </div>
+                <button type="button" onclick="sendData({test:'ok'})">Envoyer</button>
+            </form>
+        </main>
+        <footer>
+            <div class= "contact">
+                <i class="far fa-envelope"></i>
+                <p>Contact</p>
+            </div>
+        </footer>
+    </body>
+    <script type="text/javascript" src="commande.js"></script>
+</html>
