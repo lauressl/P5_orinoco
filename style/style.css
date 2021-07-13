@@ -1,57 +1,7 @@
 @charset "UTF-8";
-body {
-  font-family: "libre franklin";
-}
-
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: auto;
-  height: 65px;
-  background: linear-gradient(0deg, #d76111 0%, #7f45fc 100%);
-  background: -moz-linear-gradient(0deg, #d76111 0%, #7f45fc 100%);
-  background: -webkit-linear-gradient(0deg, #d76111 0%, #7f45fc 100%);
-}
-
-header p {
-  color: white;
-}
-
-#logo_header {
-  width: 220px;
-  height: 65px;
-}
-
-#search {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  width: 500px;
-}
-
-#search i {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 20px;
-  color: black;
-  background-color: white;
-  height: 34px;
-  width: 40px;
-}
-
-#search input {
-  font-size: 20px;
-  width: 150px;
-  height: 30px;
-  margin-left: 5px;
-}
-
 footer {
   width: auto;
-  height: 70px;
+  height: 40px;
   background-color: black;
   color: white;
   font-family: "libre franklin";
@@ -65,34 +15,49 @@ footer .contact .far {
   margin-right: 10px;
 }
 
+h1, h2 {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
 #produit {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: flex-start;
   flex-wrap: wrap;
   width: auto;
 }
-
-#produit div {
+#produit .thumb {
   display: flex;
-  flex-direction: column;
   align-items: center;
+  justify-content: space-evenly;
   border-radius: 20px;
   box-shadow: #9c9999 1px 2px 3px 4px;
-  height: 300px;
-  width: 300px;
+  height: 30%;
+  width: 50%;
   padding: 10px;
-  margin: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
 }
-
-#produit p {
+#produit .thumb .para_btn {
+  display: flex;
+  flex-direction: column;
+}
+#produit .thumb .para_btn p {
   font-family: "libre franklin";
   font-weight: bold;
 }
-
-img {
+#produit .thumb img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 300px;
-  height: 200px;
+  height: 300px;
+  border-radius: 150px;
+  box-shadow: 5px 5px 5px grey;
+  object-fit: cover;
 }
 
 button {
@@ -104,7 +69,6 @@ button {
   border-radius: 10px;
 }
 
-/*page produit*/
 #produit_unit {
   display: flex;
   border-radius: 20px;
@@ -112,39 +76,103 @@ button {
   height: auto;
   width: 40%;
   padding: 10px;
-  margin: auto;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 100px;
+  margin-bottom: 100px;
 }
-
 #produit_unit div {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 }
+#produit_unit img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  height: 300px;
+  border-radius: 150px;
+  box-shadow: 5px 5px 5px grey;
+  object-fit: cover;
+}
+
+table {
+  table-layout: fixed;
+  width: 50%;
+  border-collapse: collapse;
+  border: 3px solid purple;
+  text-align: center;
+  margin: auto;
+}
+table th, table td {
+  padding: 20px;
+}
+table thead th:nth-child(1) {
+  width: 30%;
+}
+table thead th:nth-child(2) {
+  width: 20%;
+}
+table thead th:nth-child(3) {
+  width: 15%;
+}
+table thead th:nth-child(4) {
+  width: 35%;
+}
+
+body {
+  font-family: "libre franklin";
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: auto;
+  height: 50px;
+  background: linear-gradient(0deg, #d76111 0%, #7f45fc 100%);
+  background: -moz-linear-gradient(0deg, #d76111 0%, #7f45fc 100%);
+  background: -webkit-linear-gradient(0deg, #d76111 0%, #7f45fc 100%);
+}
+header p {
+  color: white;
+  text-align: center;
+}
+header #logo_header {
+  width: 200px;
+  height: 50px;
+}
 
 nav {
   display: flex;
   width: auto;
-  justify-content: space-between;
-  height: 30px;
-  background-color: black;
-  color: white;
-}
-
-#nav_bar {
-  display: flex;
-  justify-content: space-between;
   align-items: center;
-  width: 300px;
-  margin-left: 15px;
-}
-
-#nav_bar a:hover {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #aa2be6;
+  justify-content: flex-start;
   height: 30px;
+  background-color: rgba(243, 221, 233, 0.734);
+  color: black;
+}
+nav ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 50%;
+  list-style: none;
+  padding: 0;
+}
+nav ul a {
+  text-decoration: none;
+}
+nav ul a:hover, nav ul li:hover {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #895ce9;
+  height: 30px;
+  width: 130px;
 }
 
 #panier {
@@ -153,7 +181,7 @@ nav {
   justify-content: space-between;
   align-items: center;
   text-decoration: none;
-  color: white;
+  color: black;
   width: 70px;
   padding-right: 20px;
 }
@@ -164,56 +192,6 @@ main h1 {
 
 main h2 {
   font-size: 18px;
-}
-
-body {
-  font-family: "libre franklin";
-}
-
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: auto;
-  height: 65px;
-  background: linear-gradient(0deg, #d76111 0%, #7f45fc 100%);
-  background: -moz-linear-gradient(0deg, #d76111 0%, #7f45fc 100%);
-  background: -webkit-linear-gradient(0deg, #d76111 0%, #7f45fc 100%);
-}
-
-header p {
-  color: white;
-}
-
-#logo_header {
-  width: 220px;
-  height: 65px;
-}
-
-#search {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  width: 500px;
-}
-
-#search i {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 20px;
-  color: black;
-  background-color: white;
-  height: 34px;
-  width: 40px;
-}
-
-#search input {
-  font-size: 20px;
-  width: 150px;
-  height: 30px;
-  margin-left: 5px;
 }
 
 form {
