@@ -4,12 +4,16 @@ function afficherProduitsMemeType (name, infos){
         let table =  document.getElementById("cart_tablebody");
         let line = document.createElement("tr");
         let cellName = document.createElement("td");
+        let divArt = document.createElement("div");
         let cellPrice = document.createElement("td");
         let cellColor = document.createElement("td");
+        let img = document.createElement("img");
+        img.src = nounours.imgProduct;
 
         //remplissage du tableau
-        cellName.append(name);
-        cellPrice.append(nounours.price);
+        cellName.append(divArt);
+        divArt.append(name + img);
+        cellPrice.append(nounours.price + " €");
         cellColor.append(nounours.colorValue);
         line.append(cellName, cellPrice, cellColor);
         table.append(line);
@@ -32,9 +36,10 @@ function forEachProduct() {
        
         const itemsInfos = JSON.parse(localStorage.getItem(`${itemName}`));
         //console.log(itemsInfos);
-
-        afficherProduitsMemeType(itemName, itemsInfos);
-        //affiche tous les produits commandés du meme type
+        if (Array.isArray(itemsInfos)) {
+            afficherProduitsMemeType(itemName, itemsInfos);
+            //affiche tous les produits commandés du meme type
+        }
         total+= getTotal(itemsInfos);
     }
     divSubtotal = document.getElementById("subtotal");
