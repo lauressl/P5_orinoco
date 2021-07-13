@@ -1,0 +1,68 @@
+body {
+    font-family: 'libre franklin';
+}
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: auto;
+    height: 50px;
+    background: linear-gradient(0deg, rgba(215,97,17,1) 0%, rgba(127,69,252,1) 100%);
+    background: -moz-linear-gradient(0deg, rgba(215,97,17,1) 0%, rgba(127,69,252,1) 100%);
+    background: -webkit-linear-gradient(0deg, rgba(215,97,17,1) 0%, rgba(127,69,252,1) 100%);
+    p{
+        color: white;
+        text-align: center;
+    }
+    #logo_header {
+        width: 200px;
+        height: 50px;
+    }
+}
+
+nav {
+    display:flex;
+    width: auto;
+    align-items: center;
+    justify-content: flex-start;
+    height: 30px;
+    background-color: rgba(243, 221, 233, 0.734);
+    color: black;
+    ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        width: 50%;
+        list-style: none;
+        padding: 0;
+        a{
+            text-decoration: none;
+        }
+        a:hover,li:hover{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: rgb(137, 92, 233);
+            height: 30px;
+            width: 130px;
+        }
+    }
+}
+#panier{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    text-decoration: none;
+    color: black;
+    width: 70px;
+    padding-right: 20px;
+}
+
+main h1{
+    font-size: 24px;
+}
+main h2{
+    font-size: 18px;
+}

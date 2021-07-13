@@ -1,0 +1,27 @@
+table {
+    table-layout: fixed;
+    width: 50%;
+    border-collapse: collapse;
+    border: 3px solid purple;
+    text-align: center;
+    margin: auto;
+    th, td {
+        padding: 20px;
+    }
+  
+    thead {
+        th:nth-child(1) {
+            width: 30%;
+        }
+        th:nth-child(2) {
+            width: 20%;
+        }
+        th:nth-child(3) {
+            width: 15%;
+        }
+        th:nth-child(4) {
+            width: 35%;
+        }
+    }
+
+}
