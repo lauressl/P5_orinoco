@@ -2,30 +2,26 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="../style/style.css">
         <script src="https://kit.fontawesome.com/cd25f068f3.js" crossorigin="anonymous"></script>
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin&display=swap" rel="stylesheet">
     </head>
     <body>
         <header>
-            <img id="logo_header" src="logo2.png">
-            <div id="search">
-                <p>Rechercher sur le site :</p>
-                </br>
-                <input id="input_search">
-                <i class="fas fa-search"></i>
-            </div>
+            <img id="logo_header" src="../img/logo2.png">
+            <a href="panier.html" id="panier">
+                    <p>Panier</p>
+                    <i class="fas fa-shopping-basket"></i>
+            </a>
         </header>
         <nav>
-            <div id="nav_bar">
+            <ul>
                 <a href= "index.html">Accueil</a>
-                <p>Blog</p>
-            </div>
-            <a href="panier.html" id="panier">
-                <p>Panier</p>
-                <i class="fas fa-shopping-basket"></i>
-            </a>
+                <li>Nouveautés</li>
+                <li>Produits</li>
+                <li>Blog</li>
+            </ul>
         </nav>
         <main>
             <div id="produit_unit">
@@ -38,5 +34,5 @@
             </div>
         </footer>
     </body>
-    <script type="text/javascript" src="produits.js"></script>
+    <script type="text/javascript" src="../js/produits.js"></script>
 </html>
