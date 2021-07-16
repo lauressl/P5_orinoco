@@ -1,5 +1,6 @@
 body {
     font-family: 'libre franklin';
+    background-color: rgba(243, 221, 233, 0.734); 
 }
 header {
     display: flex;
@@ -7,9 +8,6 @@ header {
     justify-content: space-between;
     width: auto;
     height: 50px;
-    background: linear-gradient(0deg, rgba(215,97,17,1) 0%, rgba(127,69,252,1) 100%);
-    background: -moz-linear-gradient(0deg, rgba(215,97,17,1) 0%, rgba(127,69,252,1) 100%);
-    background: -webkit-linear-gradient(0deg, rgba(215,97,17,1) 0%, rgba(127,69,252,1) 100%);
     p{
         color: white;
         text-align: center;
@@ -25,9 +23,11 @@ nav {
     width: auto;
     align-items: center;
     justify-content: flex-start;
-    height: 30px;
-    background-color: rgba(243, 221, 233, 0.734);
+    height: 35px;
+    background-color: white;
+    box-shadow: rgb(156, 153, 153) 1px 2px 3px 2px;
     color: black;
+    margin-top: 5px;
     ul {
         display: flex;
         flex-direction: row;
@@ -38,6 +38,7 @@ nav {
         padding: 0;
         a{
             text-decoration: none;
+            color: black;
         }
         a:hover,li:hover{
             display: flex;

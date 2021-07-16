@@ -40,8 +40,7 @@ function afficherPageProduit() {
                 let getColor = document.getElementsByTagName("select")[0];
                 let colorValue = getColor.value;
                 let idProduct = nounourses._id;
-                let imgProduct = nounourses.imageUrl;
-                let cartInfos= {price, colorValue, idProduct, imgProduct};
+                let cartInfos= {price, colorValue, idProduct};
                 cartProduct.push(cartInfos);
                 window.localStorage.setItem(`${name}`, JSON.stringify(cartProduct));
             }
