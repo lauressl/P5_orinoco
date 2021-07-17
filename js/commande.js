@@ -90,6 +90,8 @@ function sendData() {
     console.log(orderId)
 
     //let urlInfos = {orderId, totalPrice}
-    window.location.replace ("confirmation.html?order="+orderId +totalPrice)
+
+    
+    window.location.replace (`confirmation.html?order=${orderId}&price=${totalPrice}`)
   })
 }

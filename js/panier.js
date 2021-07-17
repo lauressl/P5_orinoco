@@ -42,3 +42,8 @@ function forEachProduct() {
     divSubtotal.append(total);
 }
 forEachProduct();
+
+function refreshPage(){
+    localStorage.clear();
+    window.location.reload();
+}
