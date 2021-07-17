@@ -21,6 +21,19 @@ h1, h2 {
   align-content: center;
 }
 
+main {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  border-radius: 5px;
+  border: solid 1px black;
+}
+
 #produit {
   display: flex;
   flex-direction: column;
@@ -32,10 +45,12 @@ h1, h2 {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  border-radius: 20px;
-  box-shadow: #9c9999 1px 2px 3px 4px;
-  height: 30%;
-  width: 50%;
+  border-radius: 5px;
+  border: solid 1px black;
+  box-shadow: #9c9999 1px 2px 3px 2px;
+  background-color: white;
+  height: 50%;
+  width: 80%;
   padding: 10px;
   margin-left: auto;
   margin-right: auto;
@@ -44,6 +59,8 @@ h1, h2 {
 #produit .thumb .para_btn {
   display: flex;
   flex-direction: column;
+  height: 100%;
+  width: 400%;
 }
 #produit .thumb .para_btn p {
   font-family: "libre franklin";
@@ -53,8 +70,8 @@ h1, h2 {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 300px;
-  height: 300px;
+  width: 60%;
+  height: 100%;
   border-radius: 150px;
   box-shadow: 5px 5px 5px grey;
   object-fit: cover;
@@ -64,7 +81,9 @@ button {
   width: 130px;
   height: 30px;
   font-family: "libre franklin";
-  background: linear-gradient(90deg, #d76111 0%, #fefeff 100%);
+  background: linear-gradient(90deg, rgba(215, 97, 17, 0.6) 0%, rgba(127, 69, 252, 0.6) 100%);
+  background: -moz-linear-gradient(90deg, #d76111 0%, #7f45fc 100%);
+  background: -webkit-linear-gradient(90deg, #d76111 0%, 50%, #7f45fc 100%);
   border: none;
   border-radius: 10px;
 }
@@ -73,6 +92,7 @@ button {
   display: flex;
   border-radius: 20px;
   box-shadow: #9c9999 1px 2px 3px 4px;
+  background-color: white;
   height: auto;
   width: 40%;
   padding: 10px;
@@ -86,6 +106,9 @@ button {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+}
+#produit_unit div button {
+  margin-top: 10px;
 }
 #produit_unit img {
   display: flex;
@@ -124,6 +147,7 @@ table thead th:nth-child(4) {
 
 body {
   font-family: "libre franklin";
+  background-color: rgba(243, 221, 233, 0.734);
 }
 
 header {
@@ -132,9 +156,6 @@ header {
   justify-content: space-between;
   width: auto;
   height: 50px;
-  background: linear-gradient(0deg, #d76111 0%, #7f45fc 100%);
-  background: -moz-linear-gradient(0deg, #d76111 0%, #7f45fc 100%);
-  background: -webkit-linear-gradient(0deg, #d76111 0%, #7f45fc 100%);
 }
 header p {
   color: white;
@@ -150,9 +171,11 @@ nav {
   width: auto;
   align-items: center;
   justify-content: flex-start;
-  height: 30px;
-  background-color: rgba(243, 221, 233, 0.734);
+  height: 35px;
+  background-color: white;
+  box-shadow: #9c9999 1px 2px 3px 2px;
   color: black;
+  margin-top: 5px;
 }
 nav ul {
   display: flex;
@@ -165,6 +188,7 @@ nav ul {
 }
 nav ul a {
   text-decoration: none;
+  color: black;
 }
 nav ul a:hover, nav ul li:hover {
   display: flex;

@@ -1,18 +1,14 @@
-function afficherProduitsMemeType (name, infos){
+function getTypeProducts (name, infos){
     for (let nounours of infos){
         //creation des élements du tableau
         let table =  document.getElementById("cart_tablebody");
         let line = document.createElement("tr");
         let cellName = document.createElement("td");
-        let divArt = document.createElement("div");
         let cellPrice = document.createElement("td");
         let cellColor = document.createElement("td");
-        let img = document.createElement("img");
-        img.src = nounours.imgProduct;
 
         //remplissage du tableau
-        cellName.append(divArt);
-        divArt.append(name + img);
+        cellName.append(name);
         cellPrice.append(nounours.price + " €");
         cellColor.append(nounours.colorValue);
         line.append(cellName, cellPrice, cellColor);
@@ -31,14 +27,14 @@ function getTotal(infos) {
 function forEachProduct() {
     let total = 0;
     for (var i = 0; i < localStorage.length; i++) {
+        //search products on localStorage
         let itemName=localStorage.key(i);
-        //console.log(itemName);
-       
+        //get infos of locastorage items
         const itemsInfos = JSON.parse(localStorage.getItem(`${itemName}`));
-        //console.log(itemsInfos);
+        
         if (Array.isArray(itemsInfos)) {
-            afficherProduitsMemeType(itemName, itemsInfos);
-            //affiche tous les produits commandés du meme type
+            getTypeProducts(itemName, itemsInfos);
+            //print all same products
         }
         total+= getTotal(itemsInfos);
     }
@@ -46,3 +42,8 @@ function forEachProduct() {
     divSubtotal.append(total);
 }
 forEachProduct();
+
+function refreshPage(){
+    localStorage.clear();
+    window.location.reload();
+}
