@@ -1,6 +1,7 @@
 body {
     font-family: 'libre franklin';
-    background-color: rgba(243, 221, 233, 0.734); 
+    background-color: rgba(243, 221, 233, 0.734);
+    margin:0;
 }
 header {
     display: flex;
@@ -8,10 +9,6 @@ header {
     justify-content: space-between;
     width: auto;
     height: 50px;
-    p{
-        color: white;
-        text-align: center;
-    }
     #logo_header {
         width: 200px;
         height: 50px;
@@ -20,14 +17,15 @@ header {
 
 nav {
     display:flex;
-    width: auto;
+    width: 100%;
     align-items: center;
     justify-content: flex-start;
-    height: 35px;
+    height: 40px;
     background-color: white;
     box-shadow: rgb(156, 153, 153) 1px 2px 3px 2px;
     color: black;
-    margin-top: 5px;
+    font-weight: bold;
+    margin : 5px auto 5px auto;
     ul {
         display: flex;
         flex-direction: row;
@@ -44,9 +42,10 @@ nav {
             display: flex;
             align-items: center;
             justify-content: center;
-            background-color: rgb(137, 92, 233);
-            height: 30px;
-            width: 130px;
+            background-color: rgb(193, 159, 243);
+            box-shadow: rgb(156, 153, 153) 1px 2px 3px 2px;
+            height: 40px;
+            width: 110px;
         }
     }
 }
@@ -57,8 +56,25 @@ nav {
     align-items: center;
     text-decoration: none;
     color: black;
-    width: 70px;
+    font-weight: bold;
+    font-size: 18px;
+    width: 90px;
+    height: 40px;
     padding-right: 20px;
+    a{
+        color: black;
+    }
+    .fas{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-size: 14px;
+        background: linear-gradient(90deg, rgba(215,97,17,0.6) 0%, rgba(127,69,252,0.6) 100%);
+        border-radius: 5px;
+        width: 30px;
+        height: 30px;
+    }
 }
 
 main h1{
@@ -66,4 +82,12 @@ main h1{
 }
 main h2{
     font-size: 18px;
+}
+@media (max-width: 1024px){
+    nav{
+        ul{
+            width: 100%;
+            font-size: 14px;
+        }
+    }
 }

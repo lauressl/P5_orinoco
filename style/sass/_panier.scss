@@ -1,15 +1,45 @@
+#panier_title{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-size: 18px;
+    width: 50%;
+    height: 40px;
+    padding-left: 20px;
+    p{
+        color: black;
+        margin-right: 5px;
+    }
+    .fas{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-size: 14px;
+        background: linear-gradient(90deg, rgba(215,97,17,0.6) 0%, rgba(127,69,252,0.6) 100%);
+        border-radius: 5px;
+        width: 30px;
+        height: 30px;
+    }
+}
+
 table {
     table-layout: fixed;
-    width: 50%;
+    width: 80%;
     border-collapse: collapse;
-    border: 3px solid purple;
     text-align: center;
-    margin: auto;
+    margin: 50px auto 50px auto;
+    font-size: 14px;
     th, td {
         padding: 20px;
     }
   
     thead {
+        border-bottom: solid 2px black;
         th:nth-child(1) {
             width: 30%;
         }
@@ -19,9 +49,48 @@ table {
         th:nth-child(3) {
             width: 15%;
         }
-        th:nth-child(4) {
-            width: 35%;
+    }
+    tbody {
+        tr{
+            border-bottom: solid 1px black;
+        }
+    }
+    tfoot{
+        tr{
+            border-top: solid 2px rgb(248, 173, 123);
         }
     }
 
+}
+#confirm-command{
+    width: 20%;
+    min-width: 150px;
+    height: 30px;
+    font-family: 'libre franklin';
+    font-weight: 600;
+    border: solid 2px rgb(248, 173, 123);
+    border-radius: 5px;
+    background-color: rgba(243, 221, 233, 0.734);
+    margin-bottom: 10px;
+    &:hover{
+        box-shadow: rgb(248, 173, 123) 1px 2px 3px 2px;
+        bottom: 2px;
+    }
+
+}
+#clear-cart{
+    width: 20%;
+    min-width: 150px;
+    height: 30px;
+    font-family: 'libre franklin';
+    font-weight: 600;
+    border: solid 2px rgb(193, 159, 243);
+    border-radius: 5px;
+    background-color: rgba(243, 221, 233, 0.734);
+    margin-bottom: 10px;
+
+    &:hover{
+        box-shadow: rgb(193, 159, 243) 1px 2px 3px 2px;
+        bottom: 2px;
+    }
 }

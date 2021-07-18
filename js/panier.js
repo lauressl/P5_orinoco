@@ -39,7 +39,7 @@ function forEachProduct() {
         total+= getTotal(itemsInfos);
     }
     divSubtotal = document.getElementById("subtotal");
-    divSubtotal.append(total);
+    divSubtotal.append(total + "€");
 }
 forEachProduct();
 

@@ -15,7 +15,9 @@ function printProducts() {
             div3.setAttribute("class","para_btn")
             let img = document.createElement("img");
             img.src = nounoursImg;
+            img.setAttribute("class","thumb_img")
             let para = document.createElement("p");
+            let para2 = document.createElement("p");
             let btn= document.createElement("button");
             let txtBtn= document.createTextNode("Voir produit");
 
@@ -27,7 +29,9 @@ function printProducts() {
             div2.appendChild(img);
             div2.appendChild(div3);
             div3.appendChild(para);
-            para.append(nounours + " : " + nounoursPrice+ "€");
+            div3.appendChild(para2);
+            para.append(nounours);
+            para2.append(nounoursPrice+ "€");
             btn.appendChild(txtBtn);
             div3.appendChild(btn);
         }
