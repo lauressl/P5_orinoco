@@ -2,6 +2,7 @@
 <html>
     <head>
         <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="../style/style.css">
         <script src="https://kit.fontawesome.com/cd25f068f3.js" crossorigin="anonymous"></script>
         <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -24,27 +25,63 @@
             </ul>
         </nav>
         <main>
-            <table class="table">
-                <thead>
-                    <tr>
-                        <th>Article</th>
-                        <th>Prix</th>
-                        <th>Couleur</th>
-                    </tr>
-                </thead>
-                <tbody id="cart_tablebody">
+            <div class="main_container">
+                <h1 id="panier_title">
+                    <p>Votre panier</p>
+                    <i class="fas fa-shopping-basket"></i>
+                </h1>
+                
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Article</th>
+                            <th>Prix</th>
+                            <th>Couleur</th>
+                        </tr>
+                    </thead>
+                    <!--Table's part fill with js fuction forEachProduct-->
+                    <tbody id="cart_tablebody">
 
-                </tbody>
-                <tfoot id="subtotal">
-                    <tr>
-                        <td>Sous-total</td>
-                    </tr>
-                </tfoot>
-            </table>
-            
-            <button id="confirm-command" onclick="window.location.href='commande.html'">Passer la commande</button>
-            <button id="clear-cart" onclick="refreshPage()">Vider le panier</button>
-            
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td>Sous-total</td>
+                            <td id="subtotal"></td>
+                        </tr>
+                    </tfoot>
+                </table>
+                <div class="cart_button">
+                    <!--Clear cart button-->
+                    <button id="clear-cart" onclick="refreshPage()">Vider le panier</button>
+                </div>
+                <!--FORM-->
+                <div class="form_container"></div>
+                    <h1 id="confirm_title">Vos coordonnées:</h1>
+                    <form action="commande.js" method="post">
+                        <div>
+                            <label for="firstName">Nom :</label>
+                            <input type="text" pattern="[a-zA-ZÀ-ÿ]" id="firstName" name="firstName">
+                        </div>
+                        <div>
+                            <label for="lastName">Prénom :</label>
+                            <input type="text" pattern="[a-zA-ZÀ-ÿ]" id="lastName" name="lastName">
+                        </div>
+                        <div>
+                            <label for="address">Adresse :</label>
+                            <input type="text" pattern="[a-zA-ZÀ-ÿ0-9]" id="address" name="address">
+                        </div>
+                        <div>
+                            <label for="city">Ville :</label>
+                            <input type="text" pattern="[a-zA-ZÀ-ÿ]" id="city" name="city">
+                        </div>
+                        <div>
+                            <label for="email">e-mail :</label>
+                            <input type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" id="mail" name="mail">
+                        </div>
+                        <button type="button" onclick="sendData()">Envoyer</button>
+                    </form>
+                </div>
+            </div>
         </main>
         <footer>
             <div class= "contact">
@@ -54,4 +91,5 @@
         </footer>
     </body>
     <script type="text/javascript" src="../js/panier.js"></script>
+    <script type="text/javascript" src="../js/commande.js"></script>
 </html>
