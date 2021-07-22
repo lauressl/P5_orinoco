@@ -60,23 +60,23 @@
                     <form action="commande.js" method="post">
                         <div>
                             <label for="firstName">Nom :</label>
-                            <input type="text" pattern="[a-zA-ZÀ-ÿ]" id="firstName" name="firstName">
+                            <input type="text" id="firstName" name="firstName" pattern="[a-zA-ZÀ-ÿ]*" required>
                         </div>
                         <div>
                             <label for="lastName">Prénom :</label>
-                            <input type="text" pattern="[a-zA-ZÀ-ÿ]" id="lastName" name="lastName">
+                            <input type="text" id="lastName" name="lastName" pattern="[a-zA-ZÀ-ÿ]*" required>
                         </div>
                         <div>
                             <label for="address">Adresse :</label>
-                            <input type="text" pattern="[a-zA-ZÀ-ÿ0-9]" id="address" name="address">
+                            <input type="text" id="address" name="address" pattern="[a-zA-ZÀ-ÿ0-9 ]*" required>
                         </div>
                         <div>
                             <label for="city">Ville :</label>
-                            <input type="text" pattern="[a-zA-ZÀ-ÿ]" id="city" name="city">
+                            <input type="text" id="city" name="city" pattern="[a-zA-ZÀ-ÿ]*" required>
                         </div>
                         <div>
                             <label for="email">e-mail :</label>
-                            <input type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" id="mail" name="mail">
+                            <input type="email" id="mail" name="mail" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
                         </div>
                         <button type="button" onclick="sendData()">Envoyer</button>
                     </form>

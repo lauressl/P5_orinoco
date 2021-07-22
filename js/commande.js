@@ -40,6 +40,7 @@ function validate() {
   let checkmail = mailInput.checkValidity()
   let checkaddress = addressInput.checkValidity()
   let checkcity = cityInput.checkValidity()
+  console.log(checkaddress, checkcity, checkfirstName,checklastName,checkmail)
 
   //Get values of input customer information on textarea
   let firstName = firstNameInput.value
@@ -59,9 +60,9 @@ function sendData() {
   //Call validate function to get customer information
   let form = validate()
   //If there's an issue with form, don't send infos to API
-  if (!form){
+  /* if (!form){
     return
-  }
+  } */
 
   //Get product ID
   let idProduct = getProductId();
