@@ -1,3 +1,4 @@
+// MAIN (for all pages)
 main {
     display: flex;
     flex-direction: column;
@@ -6,12 +7,28 @@ main {
     margin : 20px auto 20px auto;
     border-radius: 5px;
     border-top: solid 4px black;
+    &_container{
+        height: auto;
+    }
     .header{
         display: flex;
         flex-direction: column;
         margin: 5px 15px 5px 15px;
     }
 }
+//HEADER MAIN INDEX
+.header_index{
+    h1{
+        font-size: 24px;
+        text-decoration: underline;
+        padding-left: 25px;
+    }
+    p{
+        font-size: 20px;
+        padding-left: 25px;
+    }
+}
+//LAND PAGE PRODUCTS
 #produit {
     display: flex;
     flex-direction: column;
@@ -34,6 +51,7 @@ main {
         width: 70%;
         padding: 5px;
         margin : 5px auto 20px auto;
+        //CONTAINER TXT and BUTTON
         .para_btn{
             display: flex;
             flex-direction: column;
@@ -59,6 +77,7 @@ main {
                 }
             }
         }
+        //IMG
         &_img {
             display: flex;
             justify-content: center;
@@ -72,6 +91,7 @@ main {
         }
     }
 }
+//MEDIAS
 @media (max-width: 1024px){
     main {
         width: 90%;

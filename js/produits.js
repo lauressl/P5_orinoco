@@ -8,7 +8,7 @@ function PrintPageProduct() {
     .then((nounourses) => {
     //**Create html structure**//
         //Product thumb
-        let div = document.getElementById("produit_unit");
+        let div = document.getElementById("product_unit");
 
         //Container text, select, button
         let div2 = document.createElement("div");
@@ -27,7 +27,7 @@ function PrintPageProduct() {
         let para2 = document.createElement("p");
             para2.setAttribute("class","description");
 
-            //Color choice paragraf
+            //Color choice paragraph
         let paraChoice = document.createElement("p");
         let txtChoice= document.createTextNode("Selctionnez la couleur:");
             paraChoice.setAttribute("class","txt_choice");
@@ -51,7 +51,7 @@ function PrintPageProduct() {
         btnPanier.appendChild(basketIcon);
 
 
-        //**Function for get color choice of product**//
+        //**Loop to get color choice of product**//
         for (let i in colorChoice){
             color= colorChoice[i];
             let listElem = document.createElement("option");
@@ -60,23 +60,31 @@ function PrintPageProduct() {
             choice.appendChild(listElem);
         }
 
-        //**onclick function for add elements on local storage**//
+        //**onclick function to add elements on local storage**//
         btnPanier.onclick = function addLocal(){
             let name= nounourses.name;
+            //Define var to get local storage's infos
             let verify = window.localStorage.getItem(`${name}`);
+            //Verify if product is already on local storag or not
             let cartProduct
             if (!verify) {
+                //If product isn't in local storage create value
                 cartProduct = [];
             }
             else {
+                //if product is already in, push info on same value array
                 cartProduct = JSON.parse(verify);
             }
+            //Get product's info from API's infos
             let price= nounourses.price/200
             let getColor = document.getElementsByTagName("select")[0];
             let colorValue = getColor.value;
             let idProduct = nounourses._id;
+            //Define which info we want to get
             let cartInfos= {price, colorValue, idProduct};
+            //Push info on array 
             cartProduct.push(cartInfos);
+            //Push local storage values for each product
             window.localStorage.setItem(`${name}`, JSON.stringify(cartProduct));
 
             alert("Votre produit a bien été ajouté au panier !");

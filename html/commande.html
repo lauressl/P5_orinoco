@@ -25,22 +25,23 @@
             </ul>
         </nav>
         <main>
+            <h1 id="confirm_title">Vos coordonnées:</h1>
             <form action="commande.js" method="post">
                 <div>
                     <label for="firstName">Nom :</label>
-                    <input type="text" id="firstName" name="firstName">
+                    <input type="text" pattern="[a-z0-9._%+-]" id="firstName" name="firstName">
                 </div>
                 <div>
                     <label for="lastName">Prénom :</label>
-                    <input type="text" id="lastName" name="lastName">
+                    <input type="text" pattern="[a-z0-9._%+-]" id="lastName" name="lastName">
                 </div>
                 <div>
                     <label for="address">Adresse :</label>
-                    <input type="text" id="address" name="address">
+                    <input type="text" pattern="[a-z0-9._%+-]" id="address" name="address">
                 </div>
                 <div>
                     <label for="city">Ville :</label>
-                    <input type="text" id="city" name="city">
+                    <input type="text" pattern="[a-z0-9._%+-]" id="city" name="city">
                 </div>
                 <div>
                     <label for="email">e-mail :</label>
