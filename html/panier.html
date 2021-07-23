@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang ="fr">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -7,10 +7,11 @@
         <script src="https://kit.fontawesome.com/cd25f068f3.js" crossorigin="anonymous"></script>
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin&display=swap" rel="stylesheet">
+        <title>Panier</title>
     </head>
     <body>
         <header>
-            <img id="logo_header" src="../img/logo2.png">
+            <img id="logo_header" alt="logo" src="../img/logo2.png">
             <a href="panier.html" id="panier">
                     <p>Panier</p>
                     <i class="fas fa-shopping-basket"></i>
@@ -18,7 +19,7 @@
         </header>
         <nav>
             <ul>
-                <a href= "index.html">Accueil</a>
+                <li><a href= "index.html">Accueil</a></li>
                 <li>Nouveautés</li>
                 <li>Produits</li>
                 <li>Blog</li>
@@ -26,11 +27,10 @@
         </nav>
         <main>
             <div class="main_container">
-                <h1 id="panier_title">
-                    <p>Votre panier</p>
+                <div id="panier_title">
+                    <h1>Votre panier</h1>
                     <i class="fas fa-shopping-basket"></i>
-                </h1>
-                
+                </div>
                 <table class="table">
                     <thead>
                         <tr>
@@ -47,6 +47,7 @@
                         <tr>
                             <td>Sous-total</td>
                             <td id="subtotal"></td>
+                            <td></td>
                         </tr>
                     </tfoot>
                 </table>
@@ -55,28 +56,28 @@
                     <button id="clear-cart" onclick="refreshPage()">Vider le panier</button>
                 </div>
                 <!--FORM-->
-                <div class="form_container"></div>
+                <div class="form_container">
                     <h1 id="confirm_title">Vos coordonnées:</h1>
                     <form action="commande.js" method="post">
                         <div>
                             <label for="firstName">Nom :</label>
-                            <input type="text" pattern="[a-zA-ZÀ-ÿ]" id="firstName" name="firstName">
+                            <input type="text" id="firstName" name="firstName" pattern="[a-zA-ZÀ-ÿ]*" required>
                         </div>
                         <div>
                             <label for="lastName">Prénom :</label>
-                            <input type="text" pattern="[a-zA-ZÀ-ÿ]" id="lastName" name="lastName">
+                            <input type="text" id="lastName" name="lastName" pattern="[a-zA-ZÀ-ÿ]*" required>
                         </div>
                         <div>
                             <label for="address">Adresse :</label>
-                            <input type="text" pattern="[a-zA-ZÀ-ÿ0-9]" id="address" name="address">
+                            <input type="text" id="address" name="address" pattern="[a-zA-ZÀ-ÿ0-9]+[ ]+[a-zA-ZÀ-ÿ0-9 ]*" required>
                         </div>
                         <div>
                             <label for="city">Ville :</label>
-                            <input type="text" pattern="[a-zA-ZÀ-ÿ]" id="city" name="city">
+                            <input type="text" id="city" name="city" pattern="[a-zA-ZÀ-ÿ]*" required>
                         </div>
                         <div>
                             <label for="email">e-mail :</label>
-                            <input type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" id="mail" name="mail">
+                            <input type="email" id="mail" name="mail" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
                         </div>
                         <button type="button" onclick="sendData()">Envoyer</button>
                     </form>
@@ -89,7 +90,7 @@
                 <p>Contact</p>
             </div>
         </footer>
+        <script src="../js/panier.js"></script>
+        <script src="../js/commande.js"></script>
     </body>
-    <script type="text/javascript" src="../js/panier.js"></script>
-    <script type="text/javascript" src="../js/commande.js"></script>
 </html>

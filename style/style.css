@@ -33,12 +33,12 @@ main .header {
 }
 
 .header_index h1 {
-  font-size: 24px;
+  font-size: 22px;
   text-decoration: underline;
   padding-left: 25px;
 }
 .header_index p {
-  font-size: 20px;
+  font-size: 16px;
   padding-left: 25px;
 }
 
@@ -70,8 +70,9 @@ main .header {
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 100%;
+  height: 50%;
   width: 40%;
+  padding: 20px auto;
 }
 #produit .thumb .para_btn p {
   font-family: "libre franklin";
@@ -144,13 +145,20 @@ main .header {
   height: 40%;
   padding: 15px;
 }
+#product_unit div p {
+  font-weight: bold;
+  font-size: 20px;
+}
 #product_unit div .description {
   text-align: center;
   font-style: italic;
+  font-weight: normal;
+  font-size: 16px;
 }
 #product_unit div .txt_choice {
   margin: 0;
-  font-size: 14px;
+  font-size: 16px;
+  font-weight: normal;
 }
 #product_unit div select {
   width: 20%;
@@ -219,8 +227,9 @@ main .header {
   width: 50%;
   height: 40px;
   padding-left: 20px;
+  padding-top: 20px;
 }
-#panier_title p {
+#panier_title h1 {
   color: black;
   margin-right: 5px;
 }
@@ -396,14 +405,14 @@ main h2 {
     font-size: 14px;
   }
 }
-#confirm h1 {
+.main_confirm_container h1 {
   text-align: center;
 }
-#confirm h2 {
+.main_confirm_container h2 {
   margin-left: 20px;
   font-size: 20px;
 }
-#confirm p {
+.main_confirm_container p {
   margin-left: 20px;
   font-size: 18px;
 }

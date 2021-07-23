@@ -40,6 +40,7 @@ function validate() {
   let checkmail = mailInput.checkValidity()
   let checkaddress = addressInput.checkValidity()
   let checkcity = cityInput.checkValidity()
+  console.log(checkaddress, checkcity, checkfirstName,checklastName,checkmail)
 
   //Get values of input customer information on textarea
   let firstName = firstNameInput.value
@@ -81,7 +82,6 @@ function sendData() {
       "Content-type": "application/json; charset=UTF-8"
   }
   })
-
   //Get API's response to confirm command
   .then(response=>response.json())
   .then(json => {
@@ -101,5 +101,8 @@ function sendData() {
 
     //redirect customer to confirm command page and put information on URL to get it from confirm command js page
     window.location.replace (`confirmation.html?order=${orderId}&price=${totalPrice}`)
+  })
+  .catch(error => {
+    console.log("Une erreur s'est produite dans l'affichage des éléments: " +error)
   })
 }

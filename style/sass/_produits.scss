@@ -28,13 +28,20 @@
         background-color: rgb(255, 255, 255);
         height: 40%;
         padding: 15px;
+        p{
+            font-weight: bold;
+            font-size: 20px;
+        }
         .description{
             text-align: center;
             font-style: italic;
+            font-weight: normal;
+            font-size:16px;
         }
         .txt_choice{
             margin: 0;
-            font-size: 14px;
+            font-size: 16px;
+            font-weight: normal;
         }
         select {
             width: 20%;

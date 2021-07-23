@@ -110,5 +110,8 @@ function PrintPageProduct() {
             //button
         div2.appendChild(btnPanier);
     })
+    .catch(error => {
+        console.log("Une erreur s'est produite dans l'affichage des éléments: " +error)
+    })
 }
 PrintPageProduct()
