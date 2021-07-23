@@ -53,5 +53,8 @@ function printProducts() {
             div3.appendChild(btn);
         }
     })
+    .catch(error => {
+        console.log("Une erreur s'est produite dans l'affichage des éléments: " +error)
+    })
 }
 printProducts()
