@@ -28,7 +28,7 @@ function getProductId() {
 //Get html tag information
 let firstNameInput = document.getElementById("firstName")
 let lastNameInput = document.getElementById("lastName")
-let mailInput = document.getElementById("mail")
+let mailInput = document.getElementById("email")
 let addressInput = document.getElementById("address")
 let cityInput = document.getElementById("city")
 
@@ -40,7 +40,7 @@ function validate() {
   let checkmail = mailInput.checkValidity()
   let checkaddress = addressInput.checkValidity()
   let checkcity = cityInput.checkValidity()
-  console.log(checkaddress, checkcity, checkfirstName,checklastName,checkmail)
+  //console.log(checkaddress, checkcity, checkfirstName,checklastName,checkmail)
 
   //Get values of input customer information on textarea
   let firstName = firstNameInput.value
@@ -85,8 +85,9 @@ function sendData() {
   //Get API's response to confirm command
   .then(response=>response.json())
   .then(json => {
+    //console.log(json)
     //Create function to get total cart price
-    function getTotal(price) {
+    function getTotal() {
       var sum = 0
       for (let price of json.products){
         let itemPrice= price.price;
